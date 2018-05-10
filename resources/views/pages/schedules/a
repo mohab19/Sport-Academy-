@@ -1,0 +1,64 @@
+<?php $__env->startSection('style'); ?>
+    <style>
+       .coach
+       {
+            display:inline-block;
+           margin:5px;
+           padding:5px;
+           border:1px solid #ddd;
+       }
+        .coach .text
+        {
+            font-size:16px;
+        }
+    </style>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('title'); ?>
+    <?php echo e($place->name); ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('contents'); ?>
+    <div id="private">
+        <input type="hidden" name="id" value="<?php echo e($place->id); ?>">
+    </div>
+    <section class="header">
+        <div class="container">
+            <h5 class="fl-left">Place : <?php echo e($place->name); ?></h5>
+            <h5 class="fl-right"><a href="<?php echo e(URL::route('schedules')); ?>">Back To Schedules</a> </h5>
+        </div>
+    </section>
+    <div class="content">
+        <div class="container-fluid">
+            <div class="box box-lg info">
+                <h3 class="title rose">Coaches</h3>
+                    <div class="coaches">
+                        <?php foreach($place->coaches_places as $coach_place): ?>
+                            <a href="/schedule/place/coach/<?php echo e($coach_place->id); ?>/timetable">
+                                <div class="coach">
+                                <div class="image text-center">
+                                    <img width="120" height="120" src="<?php if($coach_place->coach->user->picture): ?><?php echo e($coach_place->coach->user->picture); ?><?php else: ?>  <?php echo e(asset('images/Users/default.gif')); ?>  <?php endif; ?>">
+                                </div>
+                                <div class="text text-center dark-gray">
+                                    <?php echo e($coach_place->coach->user->short_name); ?>
+
+                                </div>
+                            </div>
+                            </a>
+                        <?php endforeach; ?>
+                    </div>
+            </div>
+            <div class="text-center">
+                <a href="/schedule/place/<?php echo e($place->id); ?>/fulltimetable"><button class="main-button">Generate FullTimeTable</button></a>
+            </div>
+        </div>
+    </div>
+
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('script'); ?>
+    <script src="<?php echo e(asset('Ajax/Schedules.js')); ?>"></script>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

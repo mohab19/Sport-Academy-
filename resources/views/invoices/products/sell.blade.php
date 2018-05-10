@@ -1,0 +1,13 @@
+@extends('invoices.master')
+@section('invoice-table-titles')
+    <th>Description</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Total</th>
+@endsection
+@section('invoice-table-body')
+    <td>{{$income->product->name}}</td>
+    <td>{{$income->price_per_unit}}</td>
+    <td>{{$income->quantity}}</td>
+    <td>{{$income->total}}</td>
+@endsection

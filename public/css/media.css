@@ -1,0 +1,114 @@
+/*Mobiles & Tablets*/
+@media (max-width: 767px)
+{
+#nav .navbar-collapse
+    {
+        background:#a9abd3;
+		max-height:420px;
+		text-align: center;
+}
+
+#nav .navbar-right {
+     margin-right: 0px;   
+}
+
+#nav .nav>li {
+    padding-bottom: 5px;
+}
+
+header .header-content {
+    margin-top: 20px;
+	text-align:center;
+}
+header img{
+    width:50%;
+}
+.title {
+    font-size: 65px;
+}
+header p,#about p,#programs p, #join-academy p, .copyright p {
+    font-size: 20px;
+}
+h2 {
+    padding: 10% 0 3% 10%;
+}
+.popup h2 {
+	padding: 10% 0 3% 0%;
+    font-size: 45px;
+    line-height: 60px;
+}
+input, textarea, select {
+    padding: 12px;
+    margin-left: -10px;
+    width: 120%;
+}
+textarea {
+    height: 65px;
+}
+#success-alert-popup, #failed-alert-popup {
+    left: 25% !important;
+	    margin-top: 15%;
+}
+
+section, footer {
+    padding: 20px 0px;
+}
+.popup-content {
+    padding: 7% 7% 0 0;
+}
+.cssload-loader {
+	left:13%;
+}
+}
+/* Small Screen */
+@media (min-width: 768px) and (max-width: 992px)
+{
+header img{
+width:100%;
+}
+.title {
+    font-size: 65px;
+}
+header p,#about p,#programs p, #join-academy p, .copyright p {
+    font-size: 20px;
+}
+h2 {
+    padding: 10% 0 3% 10%;
+}
+input, textarea, select {
+    padding: 12px;
+    margin-left: -10px;
+    width: 120%;
+}
+ 
+section, footer {
+    padding: 20px 0px;
+}
+.cssload-loader {
+	left:22%;
+}
+
+.popup h2 {
+	padding: 10% 0 3% 0%;
+    font-size: 45px;
+    line-height: 60px;
+}
+/* Medium Screen */
+@media (min-width: 993px) and (max-width: 1199px)
+{
+header p,#about p,#programs p, #join-academy p, .copyright p {
+    font-size: 20px;
+}
+	section, footer {
+    padding: 20px 0px;
+}
+.cssload-loader {
+	left:30%;
+}
+	
+}
+/* Large Screen */
+@media (min-width: 1200px)
+{
+	
+}
